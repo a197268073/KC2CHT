@@ -302,7 +302,7 @@
 		C60E827F7B7EBF59C77EE148 /* MissionUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionUtils.swift; sourceTree = "<group>"; };
 		C60EBD2F6C9FD7A64BC01E66 /* Practice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		C60EE05A6DB97CA59BDA9AE9 /* NyukyoStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NyukyoStart.swift; sourceTree = "<group>"; };
-		C60EEDDE8EA04915F77E526C /* iKanColleCmd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iKanColleCmd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60EEDDE8EA04915F77E526C /* KC2-WKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KC2-WKTest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60F38721E791BDA1AD8AB74 /* slot_39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slot_39.png; sourceTree = "<group>"; };
 		C60FBA302BB12A91F89F5406 /* MissionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionResult.swift; sourceTree = "<group>"; };
 		C60FE5A3EA598BCB448EB3D1 /* RequireInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequireInfo.swift; sourceTree = "<group>"; };
@@ -600,7 +600,7 @@
 		C60FBAC9174031D5C6987FCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C60EEDDE8EA04915F77E526C /* iKanColleCmd.app */,
+				C60EEDDE8EA04915F77E526C /* KC2-WKTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -632,7 +632,7 @@
 			);
 			name = KanColleCommand;
 			productName = KanColleCommand;
-			productReference = C60EEDDE8EA04915F77E526C /* iKanColleCmd.app */;
+			productReference = C60EEDDE8EA04915F77E526C /* KC2-WKTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -898,8 +898,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = "1.0 (TW.CHT-WKWebViewAlpha1)";
-				PRODUCT_BUNDLE_IDENTIFIER = tw.cctech.ikancollecmd;
-				PRODUCT_NAME = iKanColleCmd;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.cctech.ikancollecmd.wktest;
+				PRODUCT_NAME = "KC2-WKTest";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = "non-global";
@@ -930,8 +930,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = "1.0 (TW.CHT-WKWebViewAlpha1)";
-				PRODUCT_BUNDLE_IDENTIFIER = tw.cctech.ikancollecmd;
-				PRODUCT_NAME = iKanColleCmd;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.cctech.ikancollecmd.wktest;
+				PRODUCT_NAME = "KC2-WKTest";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				STRIP_STYLE = "non-global";
 				STRIP_SWIFT_SYMBOLS = YES;

@@ -285,9 +285,11 @@ extension SettingVC: UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDa
                 return cell
             } else if (indexPath.row == 1) {
                 let cell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
-                cell.textLabel?.text = "大破警告設定"
+                cell.textLabel?.text = "大破警告設定（本測試版無法使用）"
                 cell.detailTextLabel?.text = "類型\(Setting.getwarningAlert())"
                 cell.accessoryType = .disclosureIndicator
+                cell.isUserInteractionEnabled = false
+                cell.textLabel?.isEnabled = false
                 return cell
             } else if (indexPath.row == 2) {
                 let cell = UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)

@@ -9,7 +9,7 @@ import SnapKit
 
 class Drawer: UIView {
 
-    private let kWidth = 400
+    private let kWidth = 0//400
     private var currPosition: Int = 0
     private var expanded = false
 
@@ -116,13 +116,13 @@ extension Drawer: GripDelegate {
     func onCheck(index: Int) {
         switch (index) {
         case 1:
-            bringSubviewToFront(battleVC.view)
+            //bringSubviewToFront(battleVC.view)
             break
         case 2:
-            bringSubviewToFront(missionVC.view)
+            //bringSubviewToFront(missionVC.view)
             break
         default:
-            bringSubviewToFront(fleetVC.view)
+            //bringSubviewToFront(fleetVC.view)
             break
         }
         if (!expanded) {

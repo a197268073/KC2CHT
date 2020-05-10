@@ -30,7 +30,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.webView.backgroundColor = UIColor.black
         if #available(iOS 11.0, *) {
             webView.scrollView.contentInsetAdjustmentBehavior = .always;
-            webView.scalesPageToFit = true;
+            //webView.scalesPageToFit = true;
         }
         NotificationCenter.default.addObserver(self, selector: #selector(reloadGame), name: Constants.RELOAD_GAME, object: nil)
 
@@ -192,7 +192,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let dialog = UIAlertController(title: "iKanColleCommand", message: "請選擇登入遊戲方式", preferredStyle: .alert)
         dialog.addAction(UIAlertAction(title: "官方DMM網站（VPN/日本可用）", style: .default) { action in
             let url = URL(string: Constants.HOME_PAGE)
-            self.webView.loadRequest(URLRequest(url: url!))
+            self.webView.load(URLRequest(url: url!))
             if self.isConnectedToVpn == true {
                 UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                 UNUserNotificationCenter.current().removeAllDeliveredNotifications()
@@ -211,7 +211,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         })
         dialog.addAction(UIAlertAction(title: "緩存系統ooi（全球用戶可用）", style: .default) { action in
             let url = URL(string: Constants.OOI)
-            self.webView.loadRequest(URLRequest(url: url!))
+            self.webView.load(URLRequest(url: url!))
             if UIScreen.current <= .iPhone6_5 {
                 UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                 UNUserNotificationCenter.current().removeAllDeliveredNotifications()
@@ -230,7 +230,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         })
         dialog.addAction(UIAlertAction(title: "緩存系統kancolle.su（大陸地區以外）", style: .default) { action in
             let url = URL(string: Constants.kcsu)
-            self.webView.loadRequest(URLRequest(url: url!))
+            self.webView.load(URLRequest(url: url!))
             if UIScreen.current <= .iPhone6_5 {
                 UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                 UNUserNotificationCenter.current().removeAllDeliveredNotifications()
@@ -255,7 +255,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     @objc func blankPage(){
         let blank = "about:blank"
-        let currentPage = self.webView.request!.url!.absoluteString
+        let currentPage = self.webView.url!.absoluteString
         if currentPage == blank {
             let alert = UIAlertController(title: "遊戲尚未開啟", message: "請選擇以下其中一種操作", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "返回選擇登入方式", style: .default) { action in
