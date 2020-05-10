@@ -82,8 +82,10 @@ class KCWebView: WKWebView, WKNavigationDelegate {
     @objc private func gameStart(n: Notification) {
         OperationQueue.main.addOperation {
             //self.stringByEvaluatingJavaScript(from: Constants.FULL_SCREEN_SCRIPT)
+            self.evaluateJavaScript(Constants.FULL_SCREEN_SCRIPT)
             if (UIScreen.current <= .iPhone6_5) {
             //self.stringByEvaluatingJavaScript(from: Constants.darkBG)
+                self.evaluateJavaScript(Constants.darkBG)
             }
         }
     }
@@ -104,7 +106,7 @@ class KCWebView: WKWebView, WKNavigationDelegate {
 
 extension KCWebView: WKUIDelegate {
 
-    public func webView(_ webView: WKWebView, shouldStartLoadWith request: URLRequest) -> Bool {
+    public func webView(_ webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, request: URLRequest) -> Bool {
         if (request.url?.scheme == "kcwebview") {
             if let params = request.url?.query {
                 do {
@@ -129,6 +131,9 @@ extension KCWebView: WKUIDelegate {
             return false
         }
         webView.navigationDelegate = self
+        webView.configuration.preferences.javaScriptEnabled = true
+        //WKPreferences().javaScriptEnabled = true
+        //WKWebViewConfiguration().preferences = WKPreferences()
         return true
     }
 
@@ -230,7 +235,7 @@ extension KCWebView: WKUIDelegate {
         saveCookie()
     }
 
-    public func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+    public func webView(_ webView: WKWebView, didFailNavigation error: Error) {
     }
 
 }
